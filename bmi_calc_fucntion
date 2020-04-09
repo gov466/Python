@@ -1,0 +1,24 @@
+name_1="arjun"
+weight_1=70
+height_1=4
+name_2="kiran"
+weight_2=60
+height_2=5
+name_3="amal"
+weight_3=100
+height_3=2
+
+def bmi_calculator(name,weight,height):
+    bmi=weight/( height**2)
+    print("bmi") 
+    print(bmi)
+    if(bmi<25):
+        return name+ " "+ "not overweight"
+    else:
+        return name+ " "+ "overweight"
+result1 = bmi_calculator(name_1,weight_1,height_1)
+result2 = bmi_calculator(name_2,weight_2,height_2)
+result3 = bmi_calculator(name_3,weight_3,height_3)
+print(result1)
+print(result2)
+print(result3)

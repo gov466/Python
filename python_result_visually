@@ -1,0 +1,10 @@
+import turtle
+
+govind_turtle = turtle.Turtle()
+govind_turtle.forward(100)
+govind_turtle.right(90)
+govind_turtle.forward(100)
+govind_turtle.right(90)
+govind_turtle.forward(100)
+govind_turtle.right(90)
+govind_turtle.forward(100)

@@ -1,0 +1,16 @@
+#python program s explains split and join 
+problems='broke, pole, sherd, cam' #collection of strings
+print(problems)
+l=problems.split(", ")  #list
+print(l)
+joined = ' and '.join(l)  #insert and inspace of ,
+print(joined)
+csv=','.join(l) #comma inapsce of and
+print(csv)
+
+
+# output
+broke, pole, sherd, cam
+['broke', 'pole', 'sherd', 'cam']
+broke and pole and sherd and cam
+broke,pole,sherd,cam

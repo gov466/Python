@@ -17,7 +17,7 @@ winner = None
 board =["-","-","-",
         "-","-","-",
         "-","-","-",]
-current_player= "X "
+current_player= "O"
 def display_board() :
   print(" | " +board[0]+ " | " +board[1]+ " | "+board[2]+ " | ")
   print(" | " +board[3]+ " | " +board[4]+ " | "+board[5]+ " | ")
@@ -38,17 +38,30 @@ def play_game():
   #game has ended
   if winner =="X" or winner =="O":
     print(winner + " won ")
-  else:
+  elif winner == None:
     print("Tie")
 def handle_turn(player):
+  print(player +"'s turn")
   posistion= input("choose a posisition from 1-9: ")
-  posistion= int(posistion)-1
-  board[posistion]="X"
+
+  valid=False
+  while not valid:
+    
+    while posistion not in ["1","2","3","4","5","6","7","8","9"]:
+      posistion=input("Invalid input:choose a posisition from 1-9: ")
+    posistion= int(posistion)-1
+
+    if board[posistion] == "-":
+      valid=True
+    else:
+      print("You cant go there play again: ")
+  board[posistion]=player
   display_board()
 
 def check_if_game_over():
   check_if_winner()
-  chech_if_tie()
+
+  check_if_tie()
 
 def check_if_winner():
 
@@ -58,10 +71,11 @@ def check_if_winner():
   row_winner=check_rows()
 
   #cehck column
-  column_winner=check_columns
+  column_winner=check_columns()
 
   #chck diagnl
   diagonal_winner=check_diagonals()
+
   if row_winner:
     winner= row_winner
     #there was a winner
@@ -125,7 +139,7 @@ def check_diagonals():
   diagonal_1= board[0]==board[4]==board[8] != "-"
   diagonal_2= board[6]==board[4]==board[2] != "-"
    
-  #checking if any diagonasl are true   
+
   if diagonal_1 or diagonal_2 :
     game_still_going= False
   #return the winner(X or O)
@@ -140,8 +154,18 @@ def check_diagonals():
 
 
 def check_if_tie():
+  global game_still_going
+  if "-" not in board:
+    game_still_going = False
   return
 
 def flip_player():
+  #global variable we need
+  global current_player
+  #switching players
+  if current_player=="X":
+    current_player ="O"
+  elif current_player=="O":
+    current_player="X"
   return
 play_game()

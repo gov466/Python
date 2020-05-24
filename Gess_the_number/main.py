@@ -1,31 +1,17 @@
-print("Gess the number")
-
-	
-# generate random integer values
-from random import seed
-from random import randint
-# seed random number generator
-#seed(1)
-# generate some integers
+import random
  
-
-while True:
-  value = randint(0, 10)
-  print(value)
-  user_input =int(input("Enter your choice btw 0-10"))
-   
-
-
- 
-  if user_input ==value:
-    print("Guess correct")
-    play_again=input("Do you want to play again( Y or N")
-    if play_again == " Y ":
-      continue
-
-  elif user_input<value:
-    print("your guess is less than actual value")
-  else:
-    
-    print("your guess is greater than actual value")
-  
+n = random.randint(1, 99) #randpom fucntioon
+print(n)
+guess = int(input("Enter an integer from 1 to 99: ")) #user to input integer in that range
+while n != "guess": 		#only when the condition nis not equslto user guess goinside loop
+    #print
+    if guess < n:
+      print ("guess is low")
+      guess = int(input("Enter an integer from 1 to 99: "))
+    elif guess > n:
+      print ("guess is high")
+      guess = int(input("Enter an integer from 1 to 99: "))
+    else:
+      print ("you guessed it!")
+      break
+   # print

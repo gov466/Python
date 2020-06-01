@@ -16,23 +16,23 @@ def button_click(number):  ##function for click of a number
     current =e.get()
     e.delete(0, END)
     e.insert(0, str(current) + str(number))
-def button_clear():
+def button_clear(): #function for clear
     e.delete(0,END )
 
-def button_add():
+def button_add(): ##add
     first_number =e.get()
     global f_num
     global math
     math="addition"
     f_num =int(first_number)
     e.delete(0,END)
-def button_equal():
+def button_equal(): ##fucntion for equal-output
     
     second_number= e.get()
     e.delete(0,END)
     
     if math == "addition":
-        e.insert(0,f_num + int(second_number))
+        e.insert(0,f_num + int(second_number)) ##operations
     if math == "subtraction":
         e.insert(0,f_num - int(second_number))
     if math == "mutlipication":

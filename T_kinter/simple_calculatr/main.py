@@ -2,16 +2,16 @@
 Created on May 31, 2020
 
 @author: govind
-'''
+'''# Simple calculator#
 from tkinter import *
 import math
 
 root = Tk()
 root.title("simple calculator")
-e= Entry(root,width=35, borderwidth =5)
-e.grid(row=0, column=0, columnspan=3, padx=10, pady=10)
+e= Entry(root,width=35, borderwidth =5) ##creating an entry box
+e.grid(row=0, column=0, columnspan=3, padx=10, pady=10) ##dimensions of entry box
 #e.insert(0,"Enter your name:")
-def button_click(number):
+def button_click(number):  ##function for click of a number
    # e.delete(0,END)
     current =e.get()
     e.delete(0, END)

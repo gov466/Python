@@ -1,3 +1,7 @@
+##a Simple image viewer app with python
+##put the images in same working directory
+
+
 from tkinter import *
 from PIL import Image,ImageTk
 from distutils import command

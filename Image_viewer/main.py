@@ -9,20 +9,20 @@ from _ast import Lambda
 from apport.hookutils import command_available
 
 root=Tk()
-root.title("Image viewer")
+root.title("Image viewer") ##title for image viewer
 ##root.iconbitmap('icon.ico')
 try:
-    root.wm_iconbitmap('icon.ico')
+    root.wm_iconbitmap('icon.ico') ##icon not working so this...
     root.mainloop()
 except TclError:
     print('No ico file found') 
-my_img1 =ImageTk.PhotoImage(Image.open('img_20180228_094714.jpg'))
+my_img1 =ImageTk.PhotoImage(Image.open('img_20180228_094714.jpg'))  ##our first image
 my_img2 =ImageTk.PhotoImage(Image.open('0.png'))
 my_img3 =ImageTk.PhotoImage(Image.open('canadaguide.jpg'))
 my_img4 =ImageTk.PhotoImage(Image.open('canadaguide.jpg'))
 my_img5 =ImageTk.PhotoImage(Image.open('canadaguide.jpg'))
 
-image_list=[my_img1, my_img2, my_img3, my_img4, my_img5]
+image_list=[my_img1, my_img2, my_img3, my_img4, my_img5] ##making a list of images
 my_label=Label(image=my_img1)
 my_label.grid(row=0,column=0,columnspan=3)
 

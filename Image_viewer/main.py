@@ -42,7 +42,7 @@ def back():
      global button_forward
      global button_back
 
-button_back=Button(root,text='<<',command=lambda:back)
+button_back=Button(root,text='<<',command=lambda:back) ##buttons for operations
 button_exit= Button(root, text="Exit program",command=root.quit)
 button_forward=Button(root,text='>>',command=lambda:forward(2))
 button_back.grid(row=1,column=0)

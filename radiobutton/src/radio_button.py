@@ -8,7 +8,7 @@ root.title("my perogram")
 r=IntVar() ##to catch the value from button StrVAr() in case of string
 r.set("2") 
 
-def clicked(value):
+def clicked(value): ##when radiobutton clikedd our r value willbe passed to function
     myLabel= Label(root,text=r.get())
     myLabel.pack()
     

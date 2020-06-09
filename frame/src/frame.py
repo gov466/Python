@@ -3,7 +3,7 @@ from tkinter import  *
 from PIL import Image,ImageTk
 
 root =Tk()
-root.title("my perogram")
+root.title("my perogram") 
 
 frame= LabelFrame(root, text="Thi sis my frame", padx=5,pady=5)
 frame.pack(padx=10,pady=10)

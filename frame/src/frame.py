@@ -1,3 +1,4 @@
+##how frames can be made using tkinter
 from tkinter import  *
 from PIL import Image,ImageTk
 

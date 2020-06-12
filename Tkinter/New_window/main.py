@@ -1,10 +1,11 @@
+##python tkinter program to open a new window from root
 from tkinter import  *
 from PIL import Image,ImageTk
 from _ast import Lambda
 
 root =Tk()
 root.title("Canada") 
-root.geometry("633x353")
+root.geometry("633x353") ##to set the geomertry
 def open():
     global my_img
     top= Toplevel()

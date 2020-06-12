@@ -16,8 +16,8 @@ def open():
 
     
  
-my_img1=ImageTk.PhotoImage(Image.open("/home/govind/eclipse-workspace/Python/Tkinter/src/carousel-canada.jpg"))
+my_img1=ImageTk.PhotoImage(Image.open("/home/govind/eclipse-workspace/Python/Tkinter/src/carousel-canada.jpg")) ##imge for root
 my_label1=Label(root, image=my_img1).pack()
-home =Button(text="Home", command=open).place(relx=0.5, rely=0.96, anchor="c")
+home =Button(text="Home", command=open).place(relx=0.5, rely=0.96, anchor="c") ##button inside root
 ## =Button(text="572 live", command=open).place(relx=0.5, rely=0.96, anchor="c")
 mainloop()

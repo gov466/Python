@@ -6,13 +6,13 @@ from _ast import Lambda
 root =Tk()
 root.title("Canada") 
 root.geometry("633x353") ##to set the geomertry
-def open():
+def open(): ##function for second widow
     global my_img
     top= Toplevel()
     top.title("572 Pharmacy")
-    my_img= ImageTk.PhotoImage(Image.open("/home/govind/Downloads/instagram.png"))
+    my_img= ImageTk.PhotoImage(Image.open("/home/govind/Downloads/instagram.png")) ##imgae in second window
     my_lablel= Label(top, image=my_img).pack()
-    btn2 =Button(top,text="close window",command=top.destroy).pack()
+    btn2 =Button(top,text="close window",command=top.destroy).pack () ##button in second wondow
 
     
  

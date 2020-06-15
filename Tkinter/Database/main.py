@@ -23,7 +23,7 @@ c.execute("""CREATE TABLE addresses(
 #commitchanges
 conn.commit()
 
-#close connection
+##close connection
 conn.close()
 
 root.mainloop()

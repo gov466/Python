@@ -26,11 +26,11 @@ c = conn.cursor()
       
 ##function for submit button
 def submit():
-    conn = sqlite3.connect('Address_bool.db')
+    conn = sqlite3.connect('Address_bool.db') ##when usingdatabase we should place this in every function
     #curser
     c = conn.cursor()
     #insert into table
-    c.execute("INSERT INTO address VALUES(:f_name,:l_name, :address,:city , :state, :zipcode)",
+    c.execute("INSERT INTO address VALUES(:f_name,:l_name, :address,:city , :state, :zipcode)", 
               #dictionary
               {
                 'f_name':f_name.get(),
@@ -40,14 +40,14 @@ def submit():
                 'state':state.get(),
                 'zipcode':zipcode.get()
                        
-                  })
+                  }) ##what ll avlaue stio be inserted to datatbase
     
     conn.commit()
 
     #close connection
     conn.close()
     ##clear the text box
-    f_name.delete(0,END)
+    f_name.delete(0,END) 
     l_name.delete(0,END)
     address.delete(0,END)
     city.delete(0,END)
@@ -64,7 +64,7 @@ def  query():
     c.execute("SELECT *, oid FROM address")
     records=c.fetchall()
     #print(records)
-    
+    ##to print all records
     print_records = ''
     for record in records:
         #print_records += str(record)+"\n"

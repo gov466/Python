@@ -1,7 +1,7 @@
 ##creating a database with pythin tkinter
 from tkinter import  *
 from PIL import Image,ImageTk
-import sqlite3 
+import sqlite3  ##library for database creation
 
 root =Tk()
 root.title("my database") 
@@ -11,7 +11,7 @@ root.geometry("400x400")
 ##create a database
 conn = sqlite3.connect('Address_bool.db')
 #curser
-c = conn.cursor()
+c = conn.cursor() 
 
 #create table(need to create once so commented later)
  
@@ -22,7 +22,9 @@ c = conn.cursor()
     #        city text,
      #       state text,
       #      zipcode integer)""")
-
+      
+      
+##function for submit button
 def submit():
     conn = sqlite3.connect('Address_bool.db')
     #curser
@@ -77,7 +79,7 @@ def  query():
     #close connection
     conn.close()
 
-f_name=Entry(root,width=30)
+f_name=Entry(root,width=30) ##entry fields for name, address etc..
 f_name.grid(row=0, column=1, padx=20)
 
 l_name=Entry(root,width=30)
@@ -99,7 +101,7 @@ zipcode.grid(row=5, column=1, padx=20)
 
 
 #create textbox labels
-f_name_label=Label(root,text ="First name")
+f_name_label=Label(root,text ="First name") ##creating textboxes corresponding to names
 f_name_label.grid(row=0,column=0)
 
 l_name_label=Label(root,text ="Last name")

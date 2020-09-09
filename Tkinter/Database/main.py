@@ -1,6 +1,6 @@
 ##creating a database with pythin tkinter
-from tkinter import  *
-from PIL import Image,ImageTk
+from tkinter import *
+from PIL import Image, ImageTk
 import sqlite3  ##library for database creation
 
 root =Tk()

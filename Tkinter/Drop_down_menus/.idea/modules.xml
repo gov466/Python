@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Drop_down_menus.iml" filepath="$PROJECT_DIR$/.idea/Drop_down_menus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Registration_form/.idea/Registration_form.iml" filepath="$PROJECT_DIR$/../Registration_form/.idea/Registration_form.iml" />
+    </modules>
+  </component>
+</project>

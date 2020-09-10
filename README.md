@@ -1,7 +1,7 @@
 # Python
 Basic Python Programming
 
-Have used anaconda navigator for jupiter notebook for doing python
+Have used pycharm ide for doing python programs
 Working with tkinter
 
  
